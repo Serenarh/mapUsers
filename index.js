@@ -233,8 +233,9 @@ const users = [
 
 // TODO: Replace all 'company.name' entries with "The ☂️ Corporation"
 //The umbrella symbol doesn't work for me; I had to use the word
-for (let i = 0; i < users.length; i++) {
-  users[i].company.name = "The Umbrella Corporation";
-}
+const acqData = users.map(function(user) {
+  user.company.name = "The Umbrella Corporation";
+  return user;
+});
 
-console.log(users);
+console.log(acqData);
